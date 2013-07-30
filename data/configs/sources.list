@@ -1,0 +1,5 @@
+# change this with your normal repos
+
+
+deb http://http.debian.net/debian wheezy main contrib non-free
+deb http://http.debian.net/debian-multimedia/ wheezy main non-free
