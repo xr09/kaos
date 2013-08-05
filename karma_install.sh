@@ -1,6 +1,6 @@
-#!/usr/bin/env bash
+#!/bin/bash
 
-# Copyright (c) 2013 Manuel Gutierrez (http://xr09.github.io)
+# Copyright (c) 2013 Manuel Gutierrez <dhunterkde at gmail>
 # License: MIT
 
 # Get the latest version at http://bitbucket.org/xr09/kaos

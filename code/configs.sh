@@ -50,6 +50,9 @@ function setup_misc()
     sed -i '/4:23:respawn/ s/^/#/' /etc/inittab
     sed -i '/5:23:respawn/ s/^/#/' /etc/inittab
     sed -i '/6:23:respawn/ s/^/#/' /etc/inittab
+
+    # disable preload logging
+    sed -i '/OPTIONS/ s/^#//' /etc/default/preload
 }
 
 
