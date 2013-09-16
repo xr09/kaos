@@ -53,6 +53,12 @@ function setup_misc()
 
     # disable preload logging
     sed -i '/OPTIONS/ s/^#//' /etc/default/preload
+
+    # sysctl.conf tuning
+    SYSCTL=/etc/sysctl.d/10-karmatuned.conf
+    touch $SYSCTL
+    echo "vm.swappiness = 10" >> $SYSCTL
+    echo "vm.vfs_cache_pressure=50" >> $SYSCTL
 }
 
 
@@ -74,3 +80,30 @@ function setup_sensors()
     #~ echo 'type YES at the last one to write in /etc/modules'
     #~ sensors-detect
 }
+
+function hardened_security() 
+{
+    sed -i '/PermitRootLogin/ s/ yes/ no/' /etc/ssh/sshd_config
+}
+
+function disable_ipv6()
+{
+    local SYSCTL=/etc/sysctl.conf
+    grep -v '#' $SYSCTL | grep net.ipv6 > /dev/null 2>&1
+
+    if [[ $? -ne 0 ]]
+    then
+        echogreen 'Disabling IPv6'
+
+        echo 'net.ipv6.conf.all.disable_ipv6 = 1' >> $SYSCTL
+        echo 'net.ipv6.conf.default.disable_ipv6 = 1' >> $SYSCTL
+        echo 'net.ipv6.conf.lo.disable_ipv6 = 1' >> $SYSCTL
+
+        DEBUG echoblue 'Running sysctl -p'
+        sysctl -p
+    else
+        echoyellow 'IPv6 disabled'
+    fi
+}
+
+

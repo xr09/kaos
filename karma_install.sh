@@ -1,4 +1,4 @@
-#!/bin/bash
+#!/usr/bin/env bash
 
 # Copyright (c) 2013 Manuel Gutierrez <dhunterkde at gmail>
 # License: MIT
@@ -12,6 +12,7 @@ source code/configs.sh
 source code/apt.sh
 source code/packages.sh
 source code/helpers.sh
+source code/rainbow.sh
 
 
 # put your username here to setup sudo
@@ -52,4 +53,6 @@ setup_misc
 
 setup_sensors
 
-exit
+hardened_security
+
+exit 0

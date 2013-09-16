@@ -52,7 +52,7 @@ EXTRAS_MULTIMEDIA="avidemux audacity devede handbrake-gtk acetoneiso
 GRAPHICS="gimp inkscape qtqr kcolorchooser"
 
 EXTRAS_DEV="kdiff3 sqlite3 sqlite3-doc git mercurial devtodo ack-grep
-            acl markdown colordiff checkinstall colortail"
+            acl markdown colordiff checkinstall colortail meld"
 
 DEV_PYTHON="bpython python-doc python3 python3-doc diveintopython diveintopython3
             pyqt4-dev-tools python-sphinx"

@@ -1,5 +1,2 @@
-# change this with your normal repos
-
-
-deb http://http.debian.net/debian wheezy main contrib non-free
-deb http://http.debian.net/debian-multimedia/ wheezy main non-free
+deb file:/mnt/store/Isos/Debian/repo/debian.org/debian/ wheezy main contrib non-free
+deb file:/mnt/store/Isos/Debian/repo/debian.org/debian-multimedia/ wheezy main non-free
