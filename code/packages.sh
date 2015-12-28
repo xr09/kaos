@@ -21,7 +21,8 @@ KDE_QT="kdm kde-plasma-desktop kde-workspace kdewallpapers
         kde-notification-colibri p7zip qtcurve ark python-qt4
         okular kchmviewer cdcat filelight ksnapshot"
 
-MULTIMEDIA="kmix mplayer clementine smplayer vlc w32codecs gwenview kid3
+MULTIMEDIA="kmix mplayer clementine smplayer vlc w32codecs gwenview kid3 mpv
+        libjpeg-turbo-progs agave trimage imagemagick
         gtk-recordmydesktop pavucontrol gstreamer0.10-pulseaudio gstreamer0.10-ffmpeg"
 
 OFFICE="libreoffice-calc libreoffice-writer libreoffice-impress
