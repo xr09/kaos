@@ -4,28 +4,23 @@ function apt-update()
     aptitude update
 }
 
-function safe-upgrade()
+function apt-upgrade()
 {
-    aptitude -y safe-upgrade
-}
-
-function dist-upgrade()
-{
-    aptitude -y dist-upgrade
+    apt upgrade -y
 }
 
 
-function aptitude-install()
+function apt-install()
 {
     # --assume-yes --without-recommends
-    aptitude -y -R install $@
+    apt install -y $@
 }
 
 
 function install_all_packages()
 {
-    aptitude-install "$CLI_PROGRAMS $XORG_AND_FONTS
-                      $LIGHT_APPS $KDE_QT $MULTIMEDIA
+    apt-install "$CLI_PROGRAMS $XORG_AND_FONTS
+                      $INTERNET $KDE_QT $MULTIMEDIA
                       $OFFICE $FIRMWARE"
 
                       # $KERNEL_HACKING $DEV_SOFT $WINE
