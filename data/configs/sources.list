@@ -1,2 +1,20 @@
-deb file:/mnt/store/Isos/Debian/repo/debian.org/debian/ wheezy main contrib non-free
-deb file:/mnt/store/Isos/Debian/repo/debian.org/debian-multimedia/ wheezy main non-free
+#------------------------------------------------------------------------------#
+#                   OFFICIAL DEBIAN REPOS                    
+#------------------------------------------------------------------------------#
+
+###### Debian Main Repos
+deb http://ftp.....debian.org/debian/ jessie main contrib non-free 
+
+###### Debian Update Repos
+deb http://security.debian.org/ jessie/updates main contrib non-free 
+deb http://ftp.....debian.org/debian/ jessie-proposed-updates main contrib non-free 
+
+#------------------------------------------------------------------------------#
+#                      UNOFFICIAL  REPOS                       #
+#------------------------------------------------------------------------------#
+
+###### 3rd Party Binary Repos
+
+#### Debian Multimedia - http://deb-multimedia.org/
+## Run this command: apt-get update && apt-get install deb-multimedia-keyring && apt-get update
+deb http://www.deb-multimedia.org stable main non-free
